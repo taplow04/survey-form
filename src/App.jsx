@@ -46,7 +46,8 @@ function App() {
         <ThankYouScreen />
       ) : (
         <div className="survey-form">
-          <h2>Question {currentQuestion + 1}/{questionsData.length}</h2>
+          <h2>Customer Survey</h2> 
+          <h3>{currentQuestion + 1}/{questionsData.length}</h3>
           <Question
             question={questionsData[currentQuestion]}
             response={responses[questionsData[currentQuestion].id]}

@@ -4,7 +4,7 @@ function WelcomeScreen({ onStart }) {
   return (
     <div className="welcome-screen">
       <h1>Welcome to Our Survey</h1>
-      <button onClick={onStart}>Start Survey</button>
+      <button className="start" onClick={onStart}>Start Survey</button>
     </div>
   );
 }

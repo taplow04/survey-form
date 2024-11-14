@@ -1,4 +1,5 @@
 import React from 'react';
+import './Question.css'; // Optional: separate CSS for styling dots
 
 function Question({ question, response, onAnswer }) {
   const renderDots = (max) => (
@@ -12,7 +13,7 @@ function Question({ question, response, onAnswer }) {
             checked={response === String(index + 1)}
             onChange={(e) => onAnswer(question.id, e.target.value)}
           />
-          <span className="dot"></span>
+          <span className="dot">{index + 1}</span> {/* Displaying the number inside each dot */}
         </label>
       ))}
     </div>
@@ -21,7 +22,9 @@ function Question({ question, response, onAnswer }) {
   return (
     <div className="question">
       <label>{question.text}</label>
-      {question.scale ? renderDots(question.scale) : (
+      {question.scale ? (
+        renderDots(question.scale)
+      ) : (
         <textarea
           value={response || ''}
           onChange={(e) => onAnswer(question.id, e.target.value)}

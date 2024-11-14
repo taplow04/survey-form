@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: wheat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,24 +9,37 @@ body {
 }
 
 .App {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  max-width: 500px;
-  background-color: white;
-  border-radius: 8px;
+  width: 700px;
+  height: 300px;
+  background-color: rgb(78, 163, 242);
+  border-radius: 8px solid black;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .welcome-screen, .thank-you, .survey-form {
   text-align: center;
+  max-width: 700px;
+  max-height: 500px;
 }
-
+.thank-you h2{
+  margin-top: 150px;
+}
+.survey-form h3{
+  margin-left: 600px;
+}
+.welcome-screen button{
+  margin-top: 100px;
+}
 h1, h2 {
-  color: #333;
+  color: #070202;
 }
 
 button {
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
   color: white;
   border: none;
   border-radius: 4px;
@@ -35,7 +48,23 @@ button {
   margin: 10px;
   cursor: pointer;
 }
-
+.start{
+  background-color: yellow;
+  color: #070202;
+}
+.prev{
+  background-color: blue;
+}
+.skip{
+  background-color: yellow;
+  color: #070202;
+}
+.sur{
+  background-color: rebeccapurple;
+}
+.next{
+  background-color: rgb(188, 17, 168);
+}
 button:hover {
   background-color: #45a049;
 }
@@ -55,6 +84,7 @@ button:hover {
 }
 
 .dot {
+  margin-top: 50px;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -64,7 +94,7 @@ button:hover {
 }
 
 .dot-label input[type="radio"]:checked + .dot {
-  background-color: #4CAF50;
+  background-color: red;
 }
 
 textarea {
@@ -77,5 +107,6 @@ textarea {
 }
 
 .navigation-buttons button {
+  margin-top: 30px;
   margin-right: 5px;
 }
