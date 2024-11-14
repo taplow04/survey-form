@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import WelcomeScreen from './components/WelcomeScreen';
-import Question from './components/Question';
+import Question from './components/Question/Question.jsx';
 import NavigationButtons from './components/NavigationButtons';
 import ThankYouScreen from './components/ThankYouScreen';
 import { getSessionId, saveResponses, getSavedResponses, markSurveyCompleted } from './utils';
